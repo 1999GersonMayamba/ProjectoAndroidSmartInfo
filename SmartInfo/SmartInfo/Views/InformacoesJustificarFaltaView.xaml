@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartInfo.Views.InformacoesJustificarFaltaView"
+             Title="Informação Falta">
+
+
+    <Grid>
+        <ScrollView>
+            <StackLayout>
+
+
+            <Image Aspect="AspectFill" 
+                    Source="ImageCabecalho.jpg" 
+                    HorizontalOptions="FillAndExpand" 
+                    HeightRequest="200" />
+
+
+            <ListView   x:Name="ListaInformacoesFalta"
+                          RowHeight="55"
+                          HasUnevenRows="True"
+                          SeparatorColor="Gray">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Spacing="0" Margin="0,8,0,6" BackgroundColor="White">
+
+                                    <StackLayout  Orientation="Vertical">
+
+                                        <Label Text="O QUE É NESSEÇARIO? "
+                                               FontSize="20"
+                                               FontAttributes="Bold"
+                                                Padding="5,0,0,0"/>
+
+                                        <Label 
+                                                 Text="{Binding Descricao}"
+                                                 FontSize="15"
+                                                FontAttributes="Bold"
+                                                Padding="5,0,0,0"
+                                                 TextColor="#4974a2"/>
+
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        </ScrollView>
+        <ActivityIndicator x:Name="IndicadorDeActividade"
+                            IsEnabled="True"
+                            IsVisible="True"
+                            Color="#3a5d82"
+                            IsRunning="False"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            WidthRequest="50" HeightRequest="50"/>
+    </Grid>
+</ContentPage>

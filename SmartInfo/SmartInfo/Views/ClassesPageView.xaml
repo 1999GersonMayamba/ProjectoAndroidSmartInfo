@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartInfo.Views.ClassesPageView"
+             Title="Classes">
+
+
+
+    <Grid>
+        <StackLayout>
+
+            <Image Aspect="AspectFill" 
+                    Source="ImageCabecalho.jpg" 
+                    HorizontalOptions="FillAndExpand" 
+                    HeightRequest="200" />
+
+            <ListView   x:Name="ListaClasses"
+                  RowHeight="55"
+                  HasUnevenRows="True"
+                  CachingStrategy="RecycleElement"
+                  SeparatorColor="Gray">
+
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid Margin="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <!--<RowDefinition Height="*"></RowDefinition>-->
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <!--<ColumnDefinition Width="40"></ColumnDefinition>-->
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <StackLayout Grid.Row="0"
+                         Grid.Column="0"
+                         Orientation="Horizontal">
+
+                                        <Label Text="Classe: "
+                        FontSize="15"
+                         TextColor="Black"
+                         FontAttributes="Bold"/>
+
+                                        <Label 
+                         Text="{Binding Classe}"
+                         LineBreakMode="TailTruncation"
+                         FontSize="15"
+                         TextColor="Black"
+                         FontAttributes="Bold"/>
+
+                                    </StackLayout>
+
+
+                                    <!--<Label Grid.Row="1" Grid.Column="0" 
+                                           Text="{Binding DescricaoModo}"  
+                                            FontSize="12"  
+                                           FontAttributes="Bold"
+                                           TextColor="Gray"/>-->
+
+                                    <!--<StackLayout Grid.Row="0" Grid.RowSpan="2" 
+                                                Grid.Column="1" >
+
+                                        <Image  
+                                           Source="{Binding Image}" 
+                                           Aspect="AspectFit"
+                                            HeightRequest="25"
+                                            WidthRequest="25"/>
+
+                                    </StackLayout>-->
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+        <ActivityIndicator x:Name="IndicadorDeActividade"
+                            IsEnabled="True"
+                            IsVisible="True"
+                            Color="#3a5d82"
+                            IsRunning="False"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            WidthRequest="50" HeightRequest="50"/>
+  </Grid>
+
+</ContentPage>
+

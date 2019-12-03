@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartInfo.Views.QuadroDeHonraPageView"
+             Title="Quadro De Honra">
+
+
+    <Grid>
+
+        <StackLayout>
+
+            <ListView   x:Name="ListaAlunosDeHonra"
+                          RowHeight="55"
+                          HasUnevenRows="True"
+                          SeparatorColor="Gray">
+
+                <!--CachingStrategy="RecycleElement"-->
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Spacing="0" Margin="0,8,0,6" BackgroundColor="White">
+                                    
+                                    
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label  Text="Nome: " 
+                                                FontAttributes="Bold" 
+                                                FontSize="20"
+                                                Padding="5,0,0,0"/>
+
+                                        <Label  Text="{Binding Nome_Do_Aluno}" 
+                                                FontAttributes="Bold" 
+                                                FontSize="20"
+                                                Padding="5,0,0,0"/>
+                                        
+                                    </StackLayout>
+                                    
+                                    <!--<Label Text="{Binding Descricao}" 
+                                           x:Name="Lb_Descricao"
+                                           FontAttributes="Italic"
+                                           FontSize="15"
+                                           Padding="5,0,0,0"
+                                           LineBreakMode="TailTruncation"
+                                    BaileFinalista.jpg
+                                    />-->
+
+                                    <Image Aspect="AspectFill" 
+                                           Source="{Binding Foto}" 
+                                           HorizontalOptions="FillAndExpand" 
+                                           HeightRequest="300" />
+                                    
+
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label  Text="Curso: " 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                        <Label  Text="{Binding Curso}" 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label  Text="Classe: " 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                        <Label  Text="{Binding Classe}" 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label  Text="Sala: " 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                        <Label  Text="{Binding Sala}" 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label  Text="Turma: " 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                        <Label  Text="{Binding Turma}" 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                    </StackLayout>
+
+
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label  Text="Ano Lectivo: " 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                        <Label  Text="{Binding Ano_Lectivo}" 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label  Text="Pontuação: " 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                        <Label  Text="{Binding Pontuacao}" 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label  Text="Classificação: " 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                        <Label  Text="{Binding Classificacao}" 
+                                                FontAttributes="Bold" 
+                                                FontSize="15"
+                                                Padding="5,0,0,0"/>
+
+                                    </StackLayout>
+
+                                </StackLayout>
+                                <!--<Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    
+                         <Image Source="SmartBitsIcon.jpg"
+                                Grid.Row="0" Grid.Column="0"
+                                HeightRequest="50"
+                                WidthRequest="50"/>
+
+
+                            <Label 
+                                    Text="{Binding Nome_Do_Aluno}"
+                                     Grid.Row="0" Grid.Column="1"
+                                    LineBreakMode="TailTruncation"
+                                    FontSize="15"
+                                    TextColor="#3a5d82"/>
+
+    
+                                </Grid>-->
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+
+
+        <ActivityIndicator x:Name="IndicadorDeActividade"
+                            IsEnabled="True"
+                            IsVisible="True"
+                            Color="#3a5d82"
+                            IsRunning="False"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            WidthRequest="50" HeightRequest="50"/>
+    </Grid>
+
+
+</ContentPage>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartInfo.Views.HomePage"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"    
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+             mc:Ignorable="d"
+             Title="Inicio">
+
+
+    <!--<ContentPage.Content>
+        <CollectionView ItemsLayout="VerticalList"
+                        x:Name="ListaDeNoticias">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid Padding="5" Margin="12">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="3*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image  Source="{Binding UrlImage}"
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"
+                                WidthRequest="100"
+                                HeightRequest="150" />
+
+                        <Label Grid.Column="1"
+                               VerticalOptions="Center"
+                               Text="{Binding Titulo}"
+                               FontAttributes="Bold" />
+
+
+                        <Label Text="{Binding Descricao}"
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               VerticalOptions="Start"
+                               FontAttributes="Italic" />
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>-->
+
+    <ContentPage.Content>
+        <ListView x:Name="ListaDeNoticias" HasUnevenRows="false" RowHeight="400">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Spacing="0" Margin="0,8,0,6" BackgroundColor="White">
+                            <Label  Text="{Binding Titulo}" 
+                                    FontAttributes="Bold" 
+                                    FontSize="20"
+                                    Padding="5,0,0,0"/>
+                            <Label Text="{Binding Descricao}" 
+                                   x:Name="Lb_Descricao"
+                                   FontAttributes="Italic"
+                                   FontSize="15"
+                                   Padding="5,0,0,0"
+                                   LineBreakMode="TailTruncation"/>
+                            <Button Text="Mais..." 
+                                    BackgroundColor= "White"
+                                    x:Name="Btn_Ver_Mais"
+                                    BorderWidth="0" Clicked="Btn_Ver_Mais_Clicked" 
+                                    HorizontalOptions="EndAndExpand"/>
+                            <Image Aspect="AspectFill" 
+                                   Source="{Binding UrlImage}" 
+                                   HorizontalOptions="FillAndExpand" 
+                                   HeightRequest="300" />
+                            <Button  x:Name="Btn_Matricular_se" 
+                                     Text="Mais..." 
+                                     Margin="0,5,0,0"
+                                     BackgroundColor="#3a5d82"
+                                     TextColor="White" 
+                                     StyleClass="Primary" 
+                                     HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+    
+    
+</ContentPage>

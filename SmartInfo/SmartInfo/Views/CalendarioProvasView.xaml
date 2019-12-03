@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="SmartInfo.Views.CalendarioProvasView"
+             Title="Calendario Provas">
+
+
+    <Grid>
+        <StackLayout>
+
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="0,5,0,0">
+
+                <Picker Title="Classe" 
+                        x:Name="Pk_Classe" 
+                        Opacity="0.9"  
+                        ItemDisplayBinding="{Binding Classe}"
+                        HorizontalOptions="FillAndExpand"
+                        SelectedIndexChanged="Pk_Classe_SelectedIndexChanged"/>
+
+                <Picker Title="Curso" 
+                        x:Name="Pk_Curso" 
+                        Opacity="0.9"  
+                        ItemDisplayBinding="{Binding Curso}"
+                        HorizontalOptions="FillAndExpand"
+                        SelectedIndexChanged="Pk_Curso_SelectedIndexChanged"/>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="0,5,0,0">
+
+                <Picker Title="Trimestre" 
+                        x:Name="Pk_Trimestre" 
+                        Opacity="0.9"  
+                        ItemDisplayBinding="{Binding Trimestre}"
+                        HorizontalOptions="FillAndExpand"
+                        SelectedIndexChanged="Pk_Trimestre_SelectedIndexChanged"/>
+
+                <Button Text="Pesquisar"
+                        x:Name="Btn_Pesquisar"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White"
+                        BackgroundColor="#3a5d82"
+                        Clicked="Btn_Pesquisar_Clicked"/>
+
+            </StackLayout>
+
+
+
+            <!--<Image Aspect="AspectFill" 
+                    Source="ImageCabecalho.jpg" 
+                    HorizontalOptions="FillAndExpand" 
+                    HeightRequest="300" />-->
+
+            <ffimageloading:CachedImage 
+                        Source="ImageCabecalho.jpg"
+                        CacheDuration="7"
+                        Aspect="AspectFill"
+                        HorizontalOptions="FillAndExpand" 
+                        HeightRequest="200">
+            </ffimageloading:CachedImage>
+
+
+            <ListView   x:Name="ListaCalendarioDeProvas"
+                        RowHeight="20"
+                        HasUnevenRows="True"
+                        SeparatorColor="Gray">
+
+                <!--CachingStrategy="RecycleElement"-->
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid Margin="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+
+
+                                    <StackLayout Grid.Row="0" Grid.Column="0"
+                                                 Orientation="Horizontal">
+
+                                        <Label Text="DISCIPLINA: "
+                                               FontSize="15"
+                                               FontAttributes="Bold"
+                                               TextColor="Black"/>
+
+                                        <Label 
+                                             Text="{Binding Disciplina}"
+                                             LineBreakMode="TailTruncation"
+                                             FontSize="15"
+                                             TextColor="#3a5d82"/>
+
+                                    </StackLayout>
+
+
+                                    <StackLayout Grid.Row="1" Grid.Column="0"
+                                                 Orientation="Horizontal">
+
+                                        <Label Text="Tempo De Duração: "
+                                               FontSize="15"
+                                               FontAttributes="Bold"
+                                               TextColor="Black"/>
+
+                                        <Label 
+                                                Text="{Binding Tempo_De_Duracao}"
+                                                LineBreakMode="TailTruncation"
+                                                FontSize="15"
+                                                TextColor="#3a5d82"/>
+
+                                    </StackLayout>
+
+
+                                    <StackLayout   Grid.Row="2"
+                                                   Grid.Column="0"
+                                                  Orientation="Horizontal">
+
+                                        <Label Text="Data Da Prova: "
+                                               FontSize="15"
+                                               FontAttributes="Bold"
+                                               TextColor="Black"/>
+
+                                        <Label 
+                                                 Text="{Binding Data_Da_Prova}"
+                                                 LineBreakMode="TailTruncation"
+                                                 FontSize="15"
+                                                 TextColor="#3a5d82"/>
+
+                                    </StackLayout>
+
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+
+
+        <ActivityIndicator x:Name="IndicadorDeActividade"
+                            IsEnabled="True"
+                            IsVisible="True"
+                            Color="#3a5d82"
+                            IsRunning="False"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            WidthRequest="50" HeightRequest="50"/>
+    </Grid>
+
+
+
+</ContentPage>

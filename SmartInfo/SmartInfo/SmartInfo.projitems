@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{4F022904-278F-4F1B-BEC1-4FE2ED437F4E}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SmartInfo</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\Actividade.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\CalendarioProva.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\ClasseAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\ConfigSystem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\Confirmacao.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\Curso.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\Disciplina.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\InformacaoCertificado.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\InformacaoFalta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\Matricula.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\Novidade.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\PagamentoPropina.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\Pauta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\Professor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassesDeAcessoAPI\Quadro_De_Honra.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_actividade_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_calendario_prova_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_categoria_novidade_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_disciplina_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_ano_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_classe_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_confirmacao_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_curso_de_electronica10_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_curso_de_electronica11_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_curso_de_electronica12_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_curso_de_electronica13_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_curso_de_informatica10_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_curso_de_informatica11_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_curso_de_informatica12_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_curso_de_informatica13_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_curso_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_duracao_da_actividade_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\Tb_Estrutura_Boletim.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_inicio_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_instrucao_de_justificar_falta_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_instrucao_de_levantar_certificado_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_instrucao_de_pagamento_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_matricula_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_novidade_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_professor_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_provincia_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_quadro_de_honra_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Info\tb_trimestre_Info.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Menu\MasterPageItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IMessageError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ActividadeView.xaml.cs">
+      <DependentUpon>ActividadeView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AjudaPage.xaml.cs">
+      <DependentUpon>AjudaPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BoletimView.xaml.cs">
+      <DependentUpon>BoletimView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CalendarioProvasView.xaml.cs">
+      <DependentUpon>CalendarioProvasView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ClassesPageView.xaml.cs">
+      <DependentUpon>ClassesPageView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ConfiguracaoPage.xaml.cs">
+      <DependentUpon>ConfiguracaoPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ConfirmacaoView.xaml.cs">
+      <DependentUpon>ConfirmacaoView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CursosPageView.xaml.cs">
+      <DependentUpon>CursosPageView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DisciplinaPageView.xaml.cs">
+      <DependentUpon>DisciplinaPageView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\InformacaoDeLevantarCertificadoView.xaml.cs">
+      <DependentUpon>InformacaoDeLevantarCertificadoView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\InformacoesAcademicasView.xaml.cs">
+      <DependentUpon>InformacoesAcademicasView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\InformacoesDePagementoView.xaml.cs">
+      <DependentUpon>InformacoesDePagementoView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\InformacoesJustificarFaltaView.xaml.cs">
+      <DependentUpon>InformacoesJustificarFaltaView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LocalizacaoSmartbits.xaml.cs">
+      <DependentUpon>LocalizacaoSmartbits.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LogouPage.xaml.cs">
+      <DependentUpon>LogouPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MatriculaView.xaml.cs">
+      <DependentUpon>MatriculaView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NovidadeView.xaml.cs">
+      <DependentUpon>NovidadeView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\PautasView.xaml.cs">
+      <DependentUpon>PautasView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfessorPageView.xaml.cs">
+      <DependentUpon>ProfessorPageView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\QuadroDeHonraPageView.xaml.cs">
+      <DependentUpon>QuadroDeHonraPageView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SecretariaView.xaml.cs">
+      <DependentUpon>SecretariaView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AjudaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ConfiguracaoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LogouPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MatriculaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ConfirmacaoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PautasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BoletimView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\InformacoesAcademicasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CursosPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ClassesPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DisciplinaPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SecretariaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\QuadroDeHonraPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\InformacoesDePagementoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfessorPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\InformacaoDeLevantarCertificadoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\InformacoesJustificarFaltaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NovidadeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ActividadeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\CalendarioProvasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LocalizacaoSmartbits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

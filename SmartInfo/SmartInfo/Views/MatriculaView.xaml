@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartInfo.Views.MatriculaView"
+             Title="Matricula">
+
+
+    <Grid>
+        <ScrollView>
+            <Frame>
+                <StackLayout Orientation="Vertical">
+
+                   <!--Nome Completo-->
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icons8deneutro.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"/>
+                        
+                        <Entry x:Name="Et_Nome_Completo" 
+                               Placeholder="Nome Completo" 
+                               FontSize="Medium" 
+                               Opacity="0.9"
+                           HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    
+                    
+                    <!--Nome Do Pai-->
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icons8deneutro.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"/>
+
+                        <Entry x:Name="Et_Nome_Do_Pai" 
+                               Placeholder="Nome Do Pai" 
+                               FontSize="Medium" 
+                               Opacity="0.9"
+                           HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+
+                    <!--Nome Da mae-->
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icons8deneutro.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"/>
+
+                        <Entry x:Name="Et_Nome_Da_Mae" 
+                               Placeholder="Nome Da Mãe" 
+                               FontSize="Medium" 
+                               Opacity="0.9"
+                           HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <!--Endereço-->
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icons8Endereco.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"/>
+
+                        <Entry x:Name="Et_Endereco" 
+                               Placeholder="Endereço" 
+                               FontSize="Medium" 
+                               Opacity="0.9"
+                           HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <!--Altura-->
+                    <!--<StackLayout Orientation="Horizontal">
+                        <Image Source="icons8Altura.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"/>
+
+                        <Entry x:Name="Et_Altura" 
+                               Placeholder="Altura" 
+                               Keyboard="Numeric"
+                               FontSize="Medium" 
+                               Opacity="0.9"
+                           HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>-->
+
+                    <!--Data De Nascimento-->
+                    <StackLayout>
+                        <!--<Label Text="FORMULARIO DE PEDIDOS" FontAttributes="Bold" FontSize="Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>-->
+                        <Label Text="Data De Nascimento: " FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="icons8Calendario.png"  
+                                   WidthRequest="30" 
+                                   HeightRequest="30"/>
+                            <DatePicker x:Name="Data_De_Nascimento" 
+                                        Format="dd/MM/yyyy" 
+                                        HorizontalOptions="FillAndExpand"
+                                        DateSelected="Data_De_Nascimento_DateSelected"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <!--Email-->
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="Email1.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"/>
+
+                        <Entry x:Name="Et_Email" 
+                               Placeholder="Email" 
+                               Keyboard="Email"
+                               FontSize="Medium" 
+                               Opacity="0.9"
+                           HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+
+                    <!--Telephone-->
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="Telefone.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"/>
+
+                        <Entry x:Name="Et_Telefone" 
+                               Placeholder="Telefone" 
+                               Keyboard="Telephone"
+                               FontSize="Medium" 
+                               Opacity="0.9"
+                           HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+
+                     <!--Classe-->
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icon8Classe.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"/>
+                        
+                        <Picker Title="Classe" 
+                                x:Name="Pk_Classe" 
+                                Opacity="0.9"  
+                                ItemDisplayBinding="{Binding Classe}"
+                                HorizontalOptions="FillAndExpand"
+                                SelectedIndexChanged="Pk_Classe_SelectedIndexChanged"/>
+                    </StackLayout>
+
+                    <!--Curso-->
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icons8Curso.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"
+                               />
+
+                        <Picker Title="Curso" 
+                                x:Name="Pk_Curso" 
+                                Opacity="0.9"  
+                                ItemDisplayBinding="{Binding Curso}"
+                                HorizontalOptions="FillAndExpand"
+                                SelectedIndexChanged="Pk_Curso_SelectedIndexChanged"/>
+                    </StackLayout>
+
+                    <!--Numero Do Bilhete-->
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="icons8Numero_Do_Bilhete.png" 
+                               WidthRequest="30" 
+                               HeightRequest="30"/>
+
+                        <Entry x:Name="Et_Numero_BI" 
+                               Placeholder="Nº Bilhete" 
+                               FontSize="Medium" 
+                               Opacity="0.9"
+                           HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+
+                    <Button  x:Name="Btn_Matricular_se" 
+                             Text="Matricular-se" 
+                             BorderRadius="20" 
+                             BackgroundColor="#3a5d82"
+                             TextColor="White" 
+                             StyleClass="Primary" 
+                             VerticalOptions="Center" 
+                             Clicked="Btn_Matricular_se_Clicked"
+                             />
+                    
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+
+        <ActivityIndicator x:Name="IndicadorDeActividade" 
+                           IsEnabled="True" 
+                           IsVisible="True" 
+                           Color="#4682b4"
+                           IsRunning="False" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center"
+                           WidthRequest="100" HeightRequest="100"/>
+    </Grid>
+
+</ContentPage>

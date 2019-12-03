@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartInfo.Views.ConfiguracaoPage"
+             BackgroundColor="White"
+             Title="Sobre">
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+
+            <Label Text="SmartInfo"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="Gray"/>
+
+            <Label Text="Versão 1.0.0"
+                   HorizontalOptions="Center"
+                   FontAttributes="Italic"
+                   FontSize="15"/>
+
+            <Image Source="SmartBitsIcon.jpg"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="© 2015-2019 Smartbits Inc"
+                   HorizontalOptions="Center"
+                   FontSize="15"
+                   TextColor="Gray"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

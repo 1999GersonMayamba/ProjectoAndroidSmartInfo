@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="SmartInfo.Views.ActividadeView"
+             Title="Actividade">
+
+
+    <Grid>
+
+        <StackLayout>
+
+            <Picker Title="Categoria" 
+                    x:Name="Pk_CategoriaActividade" 
+                    Opacity="0.9"  
+                    ItemDisplayBinding="{Binding Duracao}"
+                    HorizontalOptions="FillAndExpand"
+                    SelectedIndexChanged="Pk_CategoriaActividade_SelectedIndexChanged"/>
+
+            <ListView   x:Name="ListaDeActividade"
+                          RowHeight="55"
+                          HasUnevenRows="True"
+                          SeparatorColor="Gray">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Spacing="0" Margin="0,8,0,6" BackgroundColor="White">
+
+                                    <Label  Text="{Binding Titulo}" 
+                                            FontAttributes="Bold" 
+                                            FontSize="20"
+                                            Padding="5,0,0,0"/>
+
+                                    <Label Text="{Binding Descricao}" 
+                                           x:Name="Lb_Descricao"
+                                           FontAttributes="Italic"
+                                           FontSize="12"
+                                           Padding="5,0,0,0"/>
+
+                                    <!--LineBreakMode="TailTruncation"-->
+
+                                    <!--<Button Text="Mais..." 
+                                            BackgroundColor= "White"
+                                            x:Name="Btn_Ver_Mais"
+                                            BorderWidth="0" 
+                                            HorizontalOptions="EndAndExpand"/>-->
+
+                                    <!--<Image Aspect="AspectFill" 
+                                           Source="{Binding Imageem}" 
+                                           HorizontalOptions="FillAndExpand" 
+                                           HeightRequest="300" />-->
+
+                                    <ffimageloading:CachedImage 
+                                             Source="{Binding Imageem}" 
+                                             CacheDuration="7"
+                                              HorizontalOptions="FillAndExpand" 
+                                             HeightRequest="300">
+                                    </ffimageloading:CachedImage>
+
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+
+
+        <ActivityIndicator x:Name="IndicadorDeActividade"
+                            IsEnabled="True"
+                            IsVisible="True"
+                            Color="#3a5d82"
+                            IsRunning="False"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            WidthRequest="50" HeightRequest="50"/>
+    </Grid>
+
+</ContentPage>

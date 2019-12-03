@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartInfo.Views.ProfessorPageView"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             Title="Professores">
+
+    <Grid>
+
+        <ListView        
+                  x:Name="ListaProfessores"
+                    HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                          <controls:CircleImage Grid.RowSpan="2"
+                                                   Source="{Binding Imagem}"
+                                                   Aspect="AspectFill"
+                                                   HeightRequest="60"
+                                                   WidthRequest="60">
+                            </controls:CircleImage>
+
+                          <StackLayout Orientation="Horizontal"
+                                       Grid.Column="1">
+
+                            <Label
+                                   Text="Nome: "
+                                   FontAttributes="Bold"
+                                    FontSize="15"
+                                   />
+
+                            <Label
+                                   Text="{Binding Nome}"
+                                   FontAttributes="Bold"
+                                    FontSize="15"
+                                   />
+                            
+                            
+                          </StackLayout>
+
+                          <StackLayout Orientation="Horizontal"
+                                       Grid.Row="1"
+                                       Grid.Column="1">
+
+                            <StackLayout Orientation="Horizontal">
+
+                              <Label
+                                   Text="Tel."
+                                   VerticalOptions="End"
+                                   FontSize="12"/>
+                              
+                              <Label
+                                     Text="{Binding Telefone} "
+                                     VerticalOptions="End"
+                                     FontSize="12"/>
+                            </StackLayout>
+
+
+                            <StackLayout Orientation="Horizontal">
+
+                              <Label
+                                   Text="Email. "
+                                   VerticalOptions="End"
+                                   FontSize="12"/>
+
+                              <Label
+                                     Text=" {Binding Email}"
+                                     VerticalOptions="End"
+                                     FontSize="12"/>
+
+                            </StackLayout>
+                            
+
+                          </StackLayout>
+                          
+
+                        
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <ActivityIndicator x:Name="IndicadorDeActividade"
+                            IsEnabled="True"
+                            IsVisible="True"
+                            Color="#3a5d82"
+                            IsRunning="False"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            WidthRequest="50" HeightRequest="50"/>
+    </Grid>
+
+</ContentPage>

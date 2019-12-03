@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartInfo.Views.LocalizacaoSmartbits"
+             Title="Localização">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--<RowDefinition Height="100" />-->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--<Label Text="test" Grid.Row="0" />-->
+        <WebView Source="https://www.google.com/maps/place/Instituto+M%C3%A9dio+Polit%C3%A9cnico+SmartBits/@-8.9173005,13.3121154,13z/data=!4m5!3m4!1s0x1a51f78e21cdf9fb:0xac1b0da37d2f6b2!8m2!3d-8.9173746!4d13.3473778" Grid.Row="0" />
+    </Grid>
+
+</ContentPage>
