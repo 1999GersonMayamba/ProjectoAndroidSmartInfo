@@ -25,7 +25,6 @@ namespace SmartInfo.Droid
         public void ShortAlert(string message)
         {
             Toast.MakeText(Application.Context, message, ToastLength.Short).Show();
-            string Nome = "Mayamba";
         }
     }
 }
