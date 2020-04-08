@@ -10,7 +10,7 @@ or get the [CI build](http://vsixgallery.com/extension/{ID}/).
 ---------------------------------------
 
 {Description}
-
+Projecto feito por min no ano de 2019 para defesa da PAP (Prova De Aptidão Profisional) de um aluno do instituto samrtbits, uma aplicação mobile que permite, fazer patricuilas online, confirmação online, saber das suas pautas de cada trimestre, ter acesso a todas informações e fe tudo que se passa na instituição....
 See the [change log](CHANGELOG.md) for changes and road map.
 
 ## Features
