@@ -15,35 +15,13 @@ or get the [CI build](http://vsixgallery.com/extension/{ID}/).
 
 ---------------------------------------
 
-DESCRIÇAO
+## Estrutura
 
-Projecto feito por min no ano de 2019 para defesa da PAP (Prova De Aptidão Profisional) de um aluno do instituto samrtbits, uma aplicação mobile que permite, fazer patricuilas online, confirmação online, saber das suas pautas de cada trimestre, ter acesso a todas informações e fe tudo que se passa na instituição....
-See the [change log](CHANGELOG.md) for changes and road map.
+- BD (mysql)
+- API Asp.Net c# (visual studio)
+  - App (Xamarin)
 
-## Features
+### Requisitos
+- Ter um telefone com SO (Android) 
+- Versão de android superior a 4.3
 
-- Feature 1
-- Feature 2
-  - Sub feature
-
-### Feature 1
-Describe feature 1. Add screenshots/code samples etc.
-
-### Feature 2
-Describe feature 2. Add screenshots/code samples etc.
-
-#### Sub feature
-Describe sub feature. Add screenshots/code samples etc.
-
-## Contribute
-Check out the [contribution guidelines](CONTRIBUTING.md)
-if you want to contribute to this project.
-
-For cloning and building this project yourself, make sure
-to install the
-[Extensibility Tools 2015](https://visualstudiogallery.msdn.microsoft.com/ab39a092-1343-46e2-b0f1-6a3f91155aa6)
-extension for Visual Studio which enables some features
-used by this project.
-
-## License
-[Apache 2.0](LICENSE)
