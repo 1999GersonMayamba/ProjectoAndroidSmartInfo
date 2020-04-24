@@ -1,4 +1,10 @@
-# smartInfo
+# SmartInfo
+
+é uma aplicação mobile para SO (android), tem a função de informar os alunos de uma dada instituição sobre os ocorrentes da instituição, apartir dele os alunos podem conseguir ter informações como:
+
+1. Valor da propina de cada classe.
+2. Requisitos nesseçarios para matricula, confirmação e justificativo de falta.
+3. Alunos tem como ver as suas notas de cada trimestre.
 
 <!-- Replace this badge with your own-->
 [![Build status](https://ci.appveyor.com/api/projects/status/hv6uyc059rqbc6fj?svg=true)](https://ci.appveyor.com/project/madskristensen/extensibilitytools)
