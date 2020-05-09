@@ -2,7 +2,7 @@
 
 é uma aplicação mobile para SO (android), tem a função de informar os alunos de uma dada instituição sobre os ocorrentes da instituição, apartir dele os alunos podem conseguir ter informações como:
 
-<p align="center">
+<p>
   <img src="https://i.ibb.co/xJQ5nPn/Screenshot-2020-05-09-10-24-11.png" width="350" title="Home">
   <img src="https://i.ibb.co/ZfwdVwy/Screenshot-2020-05-09-10-26-18.png" width="350" alt="accessibility tex="Location">
 </p>
